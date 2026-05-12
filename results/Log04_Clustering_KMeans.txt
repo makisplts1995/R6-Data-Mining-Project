@@ -1,0 +1,131 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 4 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     R6_General_Classification-weka.filters.unsupervised.attribute.NumericToNominal-R4-weka.filters.unsupervised.attribute.NumericToNominal-R4
+Instances:    399561
+Attributes:   42
+              Map_Name
+              Skill_Rank
+              Role
+              Operator_Name
+              Clearance_Level
+              Primary_Weapon
+              Secondary_Gadget
+              DK_Operator_Role
+              DK_Match_Phase
+              Prev_Round_Won
+              My_Team_Score
+              Win_Streak
+              DK_Prev_Round_Kills_Bucket
+              DK_Prev_Round_Deaths_Bucket
+              DK_Match_Kills_Bucket
+              DK_Match_Deaths_Bucket
+              DK_Team_Experience_Level
+              DK_Team_Lethal_Score
+              DK_Team_Tactical_Score
+              DK_Team_Experience_Gap
+              DK_Team_Diversity_Score
+              DK_Opp_Diversity_Score
+              DK_Match_Pressure_Score
+              DK_Opp_Count_Anchor
+              DK_Opp_Count_Assault
+              DK_Opp_Count_Roamer
+              DK_Opp_Count_Trapper
+              DK_Opp_Count_Intel
+              DK_Opp_Count_Support_ATK
+              DK_Opp_Count_Demolition
+              DK_Opp_Count_Recon
+              DK_Opp_Count_Shield
+              DK_Opp_Count_Sniper
+              Opponent_Score
+              DK_Floor_Level
+              DK_External_Soft_Walls
+              DK_Crucial_Hatches
+              DK_Team_Shotgun_Count
+              DK_Team_DMR_Count
+              DK_Team_Shield_Count
+              DK_Team_Auto_Count
+Ignored:
+              Round_Result_Won
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 21
+Within cluster sum of squared errors: 2588037.317856537
+
+Initial starting points (random):
+
+Cluster 0: OREGON,Bronze,Defender,JAGER,146,416-C_CARBINE,BARBED_WIRE,Roamer,Mid_Game,-1,0,0,None,'None (Flawless)',Early_Game/Low,Low_Deaths,'Novice (<100)',1,10,-3.400002,3,4,0,0,2,0,0,0,1,1,0,0,1,0,-1,0,2,2,0,0,3
+Cluster 1: HEREFORD_BASE,Gold,Attacker,THATCHER,74,AR33,BREACH_CHARGE,Recon,Mid_Game,1,1,1,'High (5)','Low (1-2)',8_Kills,Low_Deaths,'Novice (<100)',2,4,-6.599998,4,3,1,1,0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,2,3
+Cluster 2: PLANE,Bronze,Defender,MIRA,50,VECTOR_.45_ACP,DEPLOYABLE_SHIELD,Anchor,Early_Game,-1,0,0,None,'None (Flawless)',Early_Game/Low,Low_Deaths,'Novice (<100)',7,6,-8,4,5,0,0,1,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,5
+Cluster 3: YACHT,Gold,Attacker,GLAZ,80,OTs-03,CLAYMORE,Sniper,Early_Game,-1,0,0,None,'None (Flawless)',Early_Game/Low,Low_Deaths,'Veteran (100-150)',5,5,3.799995,3,2,0,2,0,3,0,0,0,0,0,0,0,0,-1,0,2,0,1,0,4
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                                         Cluster#
+Attribute                             Full Data                 0                 1                 2                 3
+                                     (399561.0)         (98934.0)         (21712.0)         (98038.0)        (180877.0)
+=======================================================================================================================
+Map_Name                                  HOUSE            OREGON     HEREFORD_BASE             PLANE           FAVELAS
+Skill_Rank                                 Gold              Gold              Gold              Gold              Gold
+Role                                   Attacker          Defender          Attacker          Defender          Attacker
+Operator_Name                             JAGER             JAGER          THATCHER              ROOK               ASH
+Clearance_Level                        108.0121          118.1312          117.3899           97.8532          106.8577
+Primary_Weapon                    416-C_CARBINE     416-C_CARBINE             L85A2               MP5              R4-C
+Secondary_Gadget                     NITRO_CELL       BARBED_WIRE          CLAYMORE        NITRO_CELL     BREACH_CHARGE
+DK_Operator_Role                         Roamer            Roamer             Recon            Anchor           Assault
+DK_Match_Phase                       Early_Game          Mid_Game         Late_Game        Early_Game        Early_Game
+Prev_Round_Won                          -0.8767           -0.9102            0.3113            -0.928           -0.9732
+My_Team_Score                             0.043            0.0232            0.5792            0.0177            0.0032
+Win_Streak                                   -0           -0.0261            0.3746           -0.0229           -0.0183
+DK_Prev_Round_Kills_Bucket                 None              None          High (5)              None              None
+DK_Prev_Round_Deaths_Bucket     None (Flawless)   None (Flawless)         Low (1-2)   None (Flawless)   None (Flawless)
+DK_Match_Kills_Bucket            Early_Game/Low    Early_Game/Low           8_Kills    Early_Game/Low    Early_Game/Low
+DK_Match_Deaths_Bucket               Low_Deaths        Low_Deaths        Low_Deaths        Low_Deaths        Low_Deaths
+DK_Team_Experience_Level          Novice (<100) Veteran (100-150) Veteran (100-150)     Novice (<100)     Novice (<100)
+DK_Team_Lethal_Score                     5.3879            5.9161            5.3754            6.3676            4.5694
+DK_Team_Tactical_Score                    4.367            3.8009            4.4072            4.1526            4.7879
+DK_Team_Experience_Gap                  -0.0005            2.8387            2.7327           -2.6591           -0.4406
+DK_Team_Diversity_Score                  3.3239            3.0074            3.4817            3.0633            3.6194
+DK_Opp_Diversity_Score                    3.323             3.543            3.1199            3.6785            3.0343
+DK_Match_Pressure_Score                      -0           -0.0252            0.3665           -0.0222           -0.0181
+DK_Opp_Count_Anchor                      0.8285            0.0726            1.3233            0.0526            1.6032
+DK_Opp_Count_Assault                     0.8006            1.5988            0.3256            1.5772                 0
+DK_Opp_Count_Roamer                      1.0148            0.0246            1.6457                 0            2.0306
+DK_Opp_Count_Trapper                     0.3637            0.0123            0.5642                 0            0.7289
+DK_Opp_Count_Intel                       0.3142            0.0068            0.4932                 0            0.6311
+DK_Opp_Count_Support_ATK                 0.5008            1.0268            0.1852            0.9639                 0
+DK_Opp_Count_Demolition                  0.1207            0.2427            0.0446             0.237                 0
+DK_Opp_Count_Recon                       0.6598            1.3437            0.2583            1.2757                 0
+DK_Opp_Count_Shield                      0.2309            0.4462            0.1085            0.4669                 0
+DK_Opp_Count_Sniper                      0.1607             0.221            0.0484            0.4213                 0
+Opponent_Score                            0.043            0.0485            0.2127              0.04            0.0213
+DK_Floor_Level                           0.1503            0.1444            0.1003            0.1547             0.157
+DK_External_Soft_Walls                   1.4569            1.4624            1.4217            1.4472            1.4634
+DK_Crucial_Hatches                       0.9226            0.9177            0.9094            0.9319            0.9219
+DK_Team_Shotgun_Count                    0.3606            0.6549            0.1642            0.6544            0.0639
+DK_Team_DMR_Count                        0.2161            0.0032            0.2918                 0            0.4407
+DK_Team_Shield_Count                     0.1445            0.0024            0.2273                 0            0.2906
+DK_Team_Auto_Count                       4.2756            4.3372            4.3146            4.3408            4.2018
+
+
+
+
+Time taken to build model (full training data) : 14.09 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       98934 ( 25%)
+1       21712 (  5%)
+2       98038 ( 25%)
+3      180877 ( 45%)
+

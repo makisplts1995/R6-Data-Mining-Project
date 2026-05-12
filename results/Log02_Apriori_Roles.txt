@@ -1,0 +1,196 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 500 -T 1 -C 1.1 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     R6_Apriori_Roles
+Instances:    39996
+Attributes:   15
+              ATK_Shield
+              ATK_Sniper
+              ATK_Recon
+              ATK_Support_ATK
+              ATK_Assault
+              ATK_Demolition
+              ATK_Anchor
+              DEF_Trapper
+              DEF_Anchor
+              DEF_Roamer
+              DEF_Intel
+              Map_Name
+              DK_Floor_Level
+              DK_Match_Phase
+              Attacker_Won
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.1 (4000 instances)
+Minimum metric <lift>: 1.1
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 27
+
+Size of set of large itemsets L(2): 194
+
+Size of set of large itemsets L(3): 93
+
+Size of set of large itemsets L(4): 1
+
+Best rules found:
+
+  1. DEF_Anchor=1 DEF_Roamer=2 6445 ==> DEF_Trapper=1 DEF_Intel=1 4411    conf:(0.68) < lift:(3.2)> lev:(0.08) [3031] conv:(2.49)
+  2. DEF_Trapper=1 DEF_Intel=1 8562 ==> DEF_Anchor=1 DEF_Roamer=2 4411    conf:(0.52) < lift:(3.2)> lev:(0.08) [3031] conv:(1.73)
+  3. DEF_Anchor=1 14933 ==> DEF_Trapper=1 DEF_Roamer=2 DEF_Intel=1 4411    conf:(0.3) < lift:(2.68)> lev:(0.07) [2762] conv:(1.26)
+  4. DEF_Trapper=1 DEF_Roamer=2 DEF_Intel=1 4416 ==> DEF_Anchor=1 4411    conf:(1) < lift:(2.68)> lev:(0.07) [2762] conv:(461.21)
+  5. DEF_Trapper=1 DEF_Anchor=1 7335 ==> DEF_Roamer=2 DEF_Intel=1 4411    conf:(0.6) < lift:(2.4)> lev:(0.06) [2570] conv:(1.88)
+  6. DEF_Roamer=2 DEF_Intel=1 10034 ==> DEF_Trapper=1 DEF_Anchor=1 4411    conf:(0.44) < lift:(2.4)> lev:(0.06) [2570] conv:(1.46)
+  7. DEF_Anchor=1 DEF_Roamer=2 DEF_Intel=1 4423 ==> DEF_Trapper=1 4411    conf:(1) < lift:(2.3)> lev:(0.06) [2494] conv:(192.79)
+  8. DEF_Trapper=1 17332 ==> DEF_Anchor=1 DEF_Roamer=2 DEF_Intel=1 4411    conf:(0.25) < lift:(2.3)> lev:(0.06) [2494] conv:(1.19)
+  9. DEF_Trapper=1 DEF_Roamer=2 8609 ==> DEF_Anchor=1 DEF_Intel=1 4411    conf:(0.51) < lift:(2.23)> lev:(0.06) [2436] conv:(1.58)
+ 10. DEF_Anchor=1 DEF_Intel=1 9175 ==> DEF_Trapper=1 DEF_Roamer=2 4411    conf:(0.48) < lift:(2.23)> lev:(0.06) [2436] conv:(1.51)
+ 11. DEF_Trapper=1 DEF_Anchor=1 DEF_Intel=1 4430 ==> DEF_Roamer=2 4411    conf:(1) < lift:(2.16)> lev:(0.06) [2367] conv:(119.34)
+ 12. DEF_Roamer=2 18447 ==> DEF_Trapper=1 DEF_Anchor=1 DEF_Intel=1 4411    conf:(0.24) < lift:(2.16)> lev:(0.06) [2367] conv:(1.17)
+ 13. DEF_Trapper=1 DEF_Anchor=1 DEF_Roamer=2 4428 ==> DEF_Intel=1 4411    conf:(1) < lift:(1.9)> lev:(0.05) [2086] conv:(116.89)
+ 14. DEF_Intel=1 20992 ==> DEF_Trapper=1 DEF_Anchor=1 DEF_Roamer=2 4411    conf:(0.21) < lift:(1.9)> lev:(0.05) [2086] conv:(1.13)
+ 15. DEF_Trapper=1 17332 ==> DEF_Anchor=1 DEF_Roamer=2 4428    conf:(0.26) < lift:(1.59)> lev:(0.04) [1635] conv:(1.13)
+ 16. DEF_Anchor=1 DEF_Roamer=2 6445 ==> DEF_Trapper=1 4428    conf:(0.69) < lift:(1.59)> lev:(0.04) [1635] conv:(1.81)
+ 17. DEF_Anchor=1 14933 ==> DEF_Roamer=3 6008    conf:(0.4) < lift:(1.57)> lev:(0.05) [2178] conv:(1.24)
+ 18. DEF_Roamer=3 10258 ==> DEF_Anchor=1 6008    conf:(0.59) < lift:(1.57)> lev:(0.05) [2178] conv:(1.51)
+ 19. ATK_Support_ATK=2 8320 ==> ATK_Assault=1 4541    conf:(0.55) < lift:(1.43)> lev:(0.03) [1373] conv:(1.36)
+ 20. ATK_Assault=1 15227 ==> ATK_Support_ATK=2 4541    conf:(0.3) < lift:(1.43)> lev:(0.03) [1373] conv:(1.13)
+ 21. DEF_Trapper=1 DEF_Intel=1 8562 ==> DEF_Anchor=1 4430    conf:(0.52) < lift:(1.39)> lev:(0.03) [1233] conv:(1.3)
+ 22. DEF_Anchor=1 14933 ==> DEF_Trapper=1 DEF_Intel=1 4430    conf:(0.3) < lift:(1.39)> lev:(0.03) [1233] conv:(1.12)
+ 23. DEF_Anchor=1 14933 ==> DEF_Trapper=1 DEF_Roamer=2 4428    conf:(0.3) < lift:(1.38)> lev:(0.03) [1213] conv:(1.12)
+ 24. DEF_Trapper=1 DEF_Roamer=2 8609 ==> DEF_Anchor=1 4428    conf:(0.51) < lift:(1.38)> lev:(0.03) [1213] conv:(1.29)
+ 25. ATK_Recon=2 13747 ==> ATK_Support_ATK=1 ATK_Assault=1 4130    conf:(0.3) < lift:(1.36)> lev:(0.03) [1098] conv:(1.11)
+ 26. ATK_Support_ATK=1 ATK_Assault=1 8819 ==> ATK_Recon=2 4130    conf:(0.47) < lift:(1.36)> lev:(0.03) [1098] conv:(1.23)
+ 27. DEF_Roamer=2 18447 ==> DEF_Anchor=2 DEF_Intel=1 4938    conf:(0.27) < lift:(1.36)> lev:(0.03) [1298] conv:(1.1)
+ 28. DEF_Anchor=2 DEF_Intel=1 7891 ==> DEF_Roamer=2 4938    conf:(0.63) < lift:(1.36)> lev:(0.03) [1298] conv:(1.44)
+ 29. ATK_Recon=2 ATK_Support_ATK=1 8194 ==> ATK_Assault=1 4130    conf:(0.5) < lift:(1.32)> lev:(0.03) [1010] conv:(1.25)
+ 30. ATK_Assault=1 15227 ==> ATK_Recon=2 ATK_Support_ATK=1 4130    conf:(0.27) < lift:(1.32)> lev:(0.03) [1010] conv:(1.09)
+ 31. DEF_Trapper=1 DEF_Anchor=1 7335 ==> DEF_Roamer=2 4428    conf:(0.6) < lift:(1.31)> lev:(0.03) [1044] conv:(1.36)
+ 32. DEF_Roamer=2 18447 ==> DEF_Trapper=1 DEF_Anchor=1 4428    conf:(0.24) < lift:(1.31)> lev:(0.03) [1044] conv:(1.07)
+ 33. DEF_Intel=1 20992 ==> DEF_Anchor=1 DEF_Roamer=2 4423    conf:(0.21) < lift:(1.31)> lev:(0.03) [1040] conv:(1.06)
+ 34. DEF_Anchor=1 DEF_Roamer=2 6445 ==> DEF_Intel=1 4423    conf:(0.69) < lift:(1.31)> lev:(0.03) [1040] conv:(1.51)
+ 35. ATK_Assault=1 15227 ==> ATK_Recon=2 6805    conf:(0.45) < lift:(1.3)> lev:(0.04) [1571] conv:(1.19)
+ 36. ATK_Recon=2 13747 ==> ATK_Assault=1 6805    conf:(0.5) < lift:(1.3)> lev:(0.04) [1571] conv:(1.23)
+ 37. ATK_Shield=1 14175 ==> ATK_Support_ATK=1 ATK_Assault=1 4012    conf:(0.28) < lift:(1.28)> lev:(0.02) [886] conv:(1.09)
+ 38. ATK_Support_ATK=1 ATK_Assault=1 8819 ==> ATK_Shield=1 4012    conf:(0.45) < lift:(1.28)> lev:(0.02) [886] conv:(1.18)
+ 39. DK_Floor_Level=-1 11251 ==> DK_Match_Phase=Early_Game 5368    conf:(0.48) < lift:(1.27)> lev:(0.03) [1133] conv:(1.19)
+ 40. DK_Match_Phase=Early_Game 15054 ==> DK_Floor_Level=-1 5368    conf:(0.36) < lift:(1.27)> lev:(0.03) [1133] conv:(1.12)
+ 41. ATK_Shield=1 ATK_Support_ATK=1 8409 ==> ATK_Assault=1 4012    conf:(0.48) < lift:(1.25)> lev:(0.02) [810] conv:(1.18)
+ 42. ATK_Assault=1 15227 ==> ATK_Shield=1 ATK_Support_ATK=1 4012    conf:(0.26) < lift:(1.25)> lev:(0.02) [810] conv:(1.07)
+ 43. DK_Floor_Level=0 14376 ==> DK_Match_Phase=Late_Game 5139    conf:(0.36) < lift:(1.25)> lev:(0.03) [1018] conv:(1.11)
+ 44. DK_Match_Phase=Late_Game 11464 ==> DK_Floor_Level=0 5139    conf:(0.45) < lift:(1.25)> lev:(0.03) [1018] conv:(1.16)
+ 45. DEF_Roamer=2 DEF_Intel=1 10034 ==> DEF_Anchor=2 4938    conf:(0.49) < lift:(1.23)> lev:(0.02) [917] conv:(1.18)
+ 46. DEF_Anchor=2 16024 ==> DEF_Roamer=2 DEF_Intel=1 4938    conf:(0.31) < lift:(1.23)> lev:(0.02) [917] conv:(1.08)
+ 47. ATK_Recon=1 ATK_Support_ATK=1 10984 ==> ATK_Assault=2 5770    conf:(0.53) < lift:(1.22)> lev:(0.03) [1030] conv:(1.2)
+ 48. ATK_Assault=2 17259 ==> ATK_Recon=1 ATK_Support_ATK=1 5770    conf:(0.33) < lift:(1.22)> lev:(0.03) [1030] conv:(1.09)
+ 49. DEF_Anchor=2 16024 ==> DEF_Roamer=2 Attacker_Won=0 4594    conf:(0.29) < lift:(1.21)> lev:(0.02) [807] conv:(1.07)
+ 50. DEF_Roamer=2 Attacker_Won=0 9450 ==> DEF_Anchor=2 4594    conf:(0.49) < lift:(1.21)> lev:(0.02) [807] conv:(1.17)
+ 51. DEF_Roamer=2 18447 ==> DEF_Anchor=2 Attacker_Won=0 4594    conf:(0.25) < lift:(1.21)> lev:(0.02) [807] conv:(1.06)
+ 52. DEF_Anchor=2 Attacker_Won=0 8210 ==> DEF_Roamer=2 4594    conf:(0.56) < lift:(1.21)> lev:(0.02) [807] conv:(1.22)
+ 53. ATK_Recon=1 DEF_Anchor=2 7628 ==> DEF_Roamer=2 4245    conf:(0.56) < lift:(1.21)> lev:(0.02) [726] conv:(1.21)
+ 54. DEF_Roamer=2 18447 ==> ATK_Recon=1 DEF_Anchor=2 4245    conf:(0.23) < lift:(1.21)> lev:(0.02) [726] conv:(1.05)
+ 55. DEF_Anchor=2 16024 ==> ATK_Support_ATK=1 DEF_Roamer=2 5177    conf:(0.32) < lift:(1.2)> lev:(0.02) [874] conv:(1.08)
+ 56. ATK_Support_ATK=1 DEF_Roamer=2 10739 ==> DEF_Anchor=2 5177    conf:(0.48) < lift:(1.2)> lev:(0.02) [874] conv:(1.16)
+ 57. DEF_Anchor=2 16024 ==> DEF_Roamer=2 8866    conf:(0.55) < lift:(1.2)> lev:(0.04) [1475] conv:(1.21)
+ 58. DEF_Roamer=2 18447 ==> DEF_Anchor=2 8866    conf:(0.48) < lift:(1.2)> lev:(0.04) [1475] conv:(1.15)
+ 59. ATK_Recon=1 DEF_Roamer=2 8878 ==> DEF_Anchor=2 4245    conf:(0.48) < lift:(1.19)> lev:(0.02) [688] conv:(1.15)
+ 60. DEF_Anchor=2 16024 ==> ATK_Recon=1 DEF_Roamer=2 4245    conf:(0.26) < lift:(1.19)> lev:(0.02) [688] conv:(1.06)
+ 61. DEF_Roamer=2 18447 ==> ATK_Support_ATK=1 DEF_Anchor=2 5177    conf:(0.28) < lift:(1.19)> lev:(0.02) [825] conv:(1.06)
+ 62. ATK_Support_ATK=1 DEF_Anchor=2 9434 ==> DEF_Roamer=2 5177    conf:(0.55) < lift:(1.19)> lev:(0.02) [825] conv:(1.19)
+ 63. DEF_Roamer=2 18447 ==> DEF_Anchor=2 Attacker_Won=1 4272    conf:(0.23) < lift:(1.19)> lev:(0.02) [668] conv:(1.05)
+ 64. DEF_Anchor=2 Attacker_Won=1 7814 ==> DEF_Roamer=2 4272    conf:(0.55) < lift:(1.19)> lev:(0.02) [668] conv:(1.19)
+ 65. DEF_Roamer=2 Attacker_Won=1 8997 ==> DEF_Anchor=2 4272    conf:(0.47) < lift:(1.19)> lev:(0.02) [667] conv:(1.14)
+ 66. DEF_Anchor=2 16024 ==> DEF_Roamer=2 Attacker_Won=1 4272    conf:(0.27) < lift:(1.19)> lev:(0.02) [667] conv:(1.06)
+ 67. DEF_Anchor=1 14933 ==> DEF_Intel=1 Attacker_Won=0 4731    conf:(0.32) < lift:(1.18)> lev:(0.02) [733] conv:(1.07)
+ 68. DEF_Intel=1 Attacker_Won=0 10706 ==> DEF_Anchor=1 4731    conf:(0.44) < lift:(1.18)> lev:(0.02) [733] conv:(1.12)
+ 69. ATK_Assault=1 15227 ==> ATK_Demolition=1 4348    conf:(0.29) < lift:(1.18)> lev:(0.02) [672] conv:(1.06)
+ 70. ATK_Demolition=1 9653 ==> ATK_Assault=1 4348    conf:(0.45) < lift:(1.18)> lev:(0.02) [672] conv:(1.13)
+ 71. DEF_Anchor=1 14933 ==> DEF_Roamer=2 DEF_Intel=1 4423    conf:(0.3) < lift:(1.18)> lev:(0.02) [676] conv:(1.06)
+ 72. DEF_Roamer=2 DEF_Intel=1 10034 ==> DEF_Anchor=1 4423    conf:(0.44) < lift:(1.18)> lev:(0.02) [676] conv:(1.12)
+ 73. DEF_Intel=1 20992 ==> DEF_Anchor=1 Attacker_Won=0 4731    conf:(0.23) < lift:(1.18)> lev:(0.02) [718] conv:(1.04)
+ 74. DEF_Anchor=1 Attacker_Won=0 7645 ==> DEF_Intel=1 4731    conf:(0.62) < lift:(1.18)> lev:(0.02) [718] conv:(1.25)
+ 75. ATK_Shield=1 14175 ==> ATK_Recon=1 ATK_Support_ATK=1 4578    conf:(0.32) < lift:(1.18)> lev:(0.02) [685] conv:(1.07)
+ 76. ATK_Recon=1 ATK_Support_ATK=1 10984 ==> ATK_Shield=1 4578    conf:(0.42) < lift:(1.18)> lev:(0.02) [685] conv:(1.11)
+ 77. DEF_Anchor=1 14933 ==> ATK_Recon=1 DEF_Intel=1 4369    conf:(0.29) < lift:(1.17)> lev:(0.02) [646] conv:(1.06)
+ 78. ATK_Recon=1 DEF_Intel=1 9969 ==> DEF_Anchor=1 4369    conf:(0.44) < lift:(1.17)> lev:(0.02) [646] conv:(1.12)
+ 79. DEF_Anchor=1 14933 ==> DEF_Intel=1 9175    conf:(0.61) < lift:(1.17)> lev:(0.03) [1337] conv:(1.23)
+ 80. DEF_Intel=1 20992 ==> DEF_Anchor=1 9175    conf:(0.44) < lift:(1.17)> lev:(0.03) [1337] conv:(1.11)
+ 81. ATK_Support_ATK=1 DEF_Anchor=1 8670 ==> DEF_Intel=1 5314    conf:(0.61) < lift:(1.17)> lev:(0.02) [763] conv:(1.23)
+ 82. DEF_Intel=1 20992 ==> ATK_Support_ATK=1 DEF_Anchor=1 5314    conf:(0.25) < lift:(1.17)> lev:(0.02) [763] conv:(1.05)
+ 83. ATK_Recon=1 ATK_Support_ATK=1 10984 ==> ATK_Sniper=1 4120    conf:(0.38) < lift:(1.17)> lev:(0.01) [588] conv:(1.09)
+ 84. ATK_Sniper=1 12858 ==> ATK_Recon=1 ATK_Support_ATK=1 4120    conf:(0.32) < lift:(1.17)> lev:(0.01) [588] conv:(1.07)
+ 85. ATK_Support_ATK=1 DEF_Intel=1 12219 ==> DEF_Anchor=1 5314    conf:(0.43) < lift:(1.16)> lev:(0.02) [751] conv:(1.11)
+ 86. DEF_Anchor=1 14933 ==> ATK_Support_ATK=1 DEF_Intel=1 5314    conf:(0.36) < lift:(1.16)> lev:(0.02) [751] conv:(1.08)
+ 87. DEF_Intel=1 20992 ==> DEF_Anchor=1 Attacker_Won=1 4444    conf:(0.21) < lift:(1.16)> lev:(0.02) [618] conv:(1.04)
+ 88. DEF_Anchor=1 Attacker_Won=1 7288 ==> DEF_Intel=1 4444    conf:(0.61) < lift:(1.16)> lev:(0.02) [618] conv:(1.22)
+ 89. ATK_Sniper=1 12858 ==> ATK_Assault=1 5685    conf:(0.44) < lift:(1.16)> lev:(0.02) [789] conv:(1.11)
+ 90. ATK_Assault=1 15227 ==> ATK_Sniper=1 5685    conf:(0.37) < lift:(1.16)> lev:(0.02) [789] conv:(1.08)
+ 91. DEF_Anchor=1 14933 ==> DEF_Intel=1 Attacker_Won=1 4444    conf:(0.3) < lift:(1.16)> lev:(0.02) [603] conv:(1.06)
+ 92. DEF_Intel=1 Attacker_Won=1 10286 ==> DEF_Anchor=1 4444    conf:(0.43) < lift:(1.16)> lev:(0.02) [603] conv:(1.1)
+ 93. DEF_Anchor=2 16024 ==> DEF_Roamer=1 4049    conf:(0.25) < lift:(1.15)> lev:(0.01) [540] conv:(1.05)
+ 94. DEF_Roamer=1 8757 ==> DEF_Anchor=2 4049    conf:(0.46) < lift:(1.15)> lev:(0.01) [540] conv:(1.11)
+ 95. ATK_Recon=1 DEF_Anchor=1 7217 ==> DEF_Intel=1 4369    conf:(0.61) < lift:(1.15)> lev:(0.01) [581] conv:(1.2)
+ 96. DEF_Intel=1 20992 ==> ATK_Recon=1 DEF_Anchor=1 4369    conf:(0.21) < lift:(1.15)> lev:(0.01) [581] conv:(1.03)
+ 97. DEF_Roamer=1 8757 ==> DEF_Trapper=1 4375    conf:(0.5) < lift:(1.15)> lev:(0.01) [580] conv:(1.13)
+ 98. DEF_Trapper=1 17332 ==> DEF_Roamer=1 4375    conf:(0.25) < lift:(1.15)> lev:(0.01) [580] conv:(1.04)
+ 99. ATK_Recon=1 19117 ==> ATK_Sniper=1 ATK_Support_ATK=1 4120    conf:(0.22) < lift:(1.15)> lev:(0.01) [545] conv:(1.04)
+100. ATK_Sniper=1 ATK_Support_ATK=1 7479 ==> ATK_Recon=1 4120    conf:(0.55) < lift:(1.15)> lev:(0.01) [545] conv:(1.16)
+101. ATK_Recon=1 19117 ==> ATK_Support_ATK=2 4578    conf:(0.24) < lift:(1.15)> lev:(0.02) [601] conv:(1.04)
+102. ATK_Support_ATK=2 8320 ==> ATK_Recon=1 4578    conf:(0.55) < lift:(1.15)> lev:(0.02) [601] conv:(1.16)
+103. DEF_Trapper=1 DEF_Anchor=1 7335 ==> DEF_Intel=1 4430    conf:(0.6) < lift:(1.15)> lev:(0.01) [580] conv:(1.2)
+104. DEF_Intel=1 20992 ==> DEF_Trapper=1 DEF_Anchor=1 4430    conf:(0.21) < lift:(1.15)> lev:(0.01) [580] conv:(1.03)
+105. ATK_Assault=2 DEF_Roamer=2 7938 ==> ATK_Recon=1 4350    conf:(0.55) < lift:(1.15)> lev:(0.01) [555] conv:(1.15)
+106. ATK_Recon=1 19117 ==> ATK_Assault=2 DEF_Roamer=2 4350    conf:(0.23) < lift:(1.15)> lev:(0.01) [555] conv:(1.04)
+107. ATK_Recon=1 19117 ==> ATK_Assault=2 DEF_Trapper=1 4057    conf:(0.21) < lift:(1.14)> lev:(0.01) [510] conv:(1.03)
+108. ATK_Assault=2 DEF_Trapper=1 7420 ==> ATK_Recon=1 4057    conf:(0.55) < lift:(1.14)> lev:(0.01) [510] conv:(1.15)
+109. ATK_Sniper=1 12858 ==> ATK_Recon=1 7030    conf:(0.55) < lift:(1.14)> lev:(0.02) [884] conv:(1.15)
+110. ATK_Recon=1 19117 ==> ATK_Sniper=1 7030    conf:(0.37) < lift:(1.14)> lev:(0.02) [884] conv:(1.07)
+111. ATK_Shield=1 14175 ==> ATK_Assault=1 6166    conf:(0.43) < lift:(1.14)> lev:(0.02) [769] conv:(1.1)
+112. ATK_Assault=1 15227 ==> ATK_Shield=1 6166    conf:(0.4) < lift:(1.14)> lev:(0.02) [769] conv:(1.08)
+113. ATK_Recon=1 DEF_Intel=1 9969 ==> ATK_Assault=2 4902    conf:(0.49) < lift:(1.14)> lev:(0.02) [600] conv:(1.12)
+114. ATK_Assault=2 17259 ==> ATK_Recon=1 DEF_Intel=1 4902    conf:(0.28) < lift:(1.14)> lev:(0.02) [600] conv:(1.05)
+115. ATK_Assault=2 Attacker_Won=0 8715 ==> ATK_Recon=1 4746    conf:(0.54) < lift:(1.14)> lev:(0.01) [580] conv:(1.15)
+116. ATK_Recon=1 19117 ==> ATK_Assault=2 Attacker_Won=0 4746    conf:(0.25) < lift:(1.14)> lev:(0.01) [580] conv:(1.04)
+117. ATK_Recon=1 19117 ==> ATK_Shield=1 ATK_Support_ATK=1 4578    conf:(0.24) < lift:(1.14)> lev:(0.01) [558] conv:(1.04)
+118. ATK_Shield=1 ATK_Support_ATK=1 8409 ==> ATK_Recon=1 4578    conf:(0.54) < lift:(1.14)> lev:(0.01) [558] conv:(1.15)
+119. ATK_Assault=2 17259 ==> ATK_Recon=1 Attacker_Won=1 4579    conf:(0.27) < lift:(1.14)> lev:(0.01) [547] conv:(1.04)
+120. ATK_Recon=1 Attacker_Won=1 9342 ==> ATK_Assault=2 4579    conf:(0.49) < lift:(1.14)> lev:(0.01) [547] conv:(1.11)
+121. ATK_Assault=2 17259 ==> ATK_Recon=1 DEF_Roamer=2 4350    conf:(0.25) < lift:(1.14)> lev:(0.01) [518] conv:(1.04)
+122. ATK_Recon=1 DEF_Roamer=2 8878 ==> ATK_Assault=2 4350    conf:(0.49) < lift:(1.14)> lev:(0.01) [518] conv:(1.11)
+123. ATK_Recon=1 19117 ==> ATK_Support_ATK=1 ATK_Assault=2 5770    conf:(0.3) < lift:(1.13)> lev:(0.02) [679] conv:(1.05)
+124. ATK_Support_ATK=1 ATK_Assault=2 10650 ==> ATK_Recon=1 5770    conf:(0.54) < lift:(1.13)> lev:(0.02) [679] conv:(1.14)
+125. DEF_Trapper=1 17332 ==> DEF_Anchor=1 7335    conf:(0.42) < lift:(1.13)> lev:(0.02) [863] conv:(1.09)
+126. DEF_Anchor=1 14933 ==> DEF_Trapper=1 7335    conf:(0.49) < lift:(1.13)> lev:(0.02) [863] conv:(1.11)
+127. ATK_Recon=1 19117 ==> ATK_Assault=2 DEF_Intel=1 4902    conf:(0.26) < lift:(1.13)> lev:(0.01) [576] conv:(1.04)
+128. ATK_Assault=2 DEF_Intel=1 9049 ==> ATK_Recon=1 4902    conf:(0.54) < lift:(1.13)> lev:(0.01) [576] conv:(1.14)
+129. ATK_Recon=1 DEF_Trapper=1 8314 ==> ATK_Assault=2 4057    conf:(0.49) < lift:(1.13)> lev:(0.01) [469] conv:(1.11)
+130. ATK_Assault=2 17259 ==> ATK_Recon=1 DEF_Trapper=1 4057    conf:(0.24) < lift:(1.13)> lev:(0.01) [469] conv:(1.04)
+131. ATK_Recon=1 19117 ==> ATK_Assault=2 9325    conf:(0.49) < lift:(1.13)> lev:(0.03) [1075] conv:(1.11)
+132. ATK_Assault=2 17259 ==> ATK_Recon=1 9325    conf:(0.54) < lift:(1.13)> lev:(0.03) [1075] conv:(1.14)
+133. ATK_Shield=1 14175 ==> ATK_Recon=1 7653    conf:(0.54) < lift:(1.13)> lev:(0.02) [877] conv:(1.13)
+134. ATK_Recon=1 19117 ==> ATK_Shield=1 7653    conf:(0.4) < lift:(1.13)> lev:(0.02) [877] conv:(1.08)
+135. ATK_Recon=1 Attacker_Won=0 9775 ==> ATK_Assault=2 4746    conf:(0.49) < lift:(1.13)> lev:(0.01) [527] conv:(1.1)
+136. ATK_Assault=2 17259 ==> ATK_Recon=1 Attacker_Won=0 4746    conf:(0.27) < lift:(1.13)> lev:(0.01) [527] conv:(1.04)
+137. ATK_Assault=1 15227 ==> DK_Floor_Level=-1 4816    conf:(0.32) < lift:(1.12)> lev:(0.01) [532] conv:(1.05)
+138. DK_Floor_Level=-1 11251 ==> ATK_Assault=1 4816    conf:(0.43) < lift:(1.12)> lev:(0.01) [532] conv:(1.08)
+139. ATK_Support_ATK=1 DEF_Trapper=1 10058 ==> DEF_Anchor=1 4214    conf:(0.42) < lift:(1.12)> lev:(0.01) [458] conv:(1.08)
+140. DEF_Anchor=1 14933 ==> ATK_Support_ATK=1 DEF_Trapper=1 4214    conf:(0.28) < lift:(1.12)> lev:(0.01) [458] conv:(1.04)
+141. ATK_Support_ATK=1 DEF_Anchor=1 8670 ==> DEF_Trapper=1 4214    conf:(0.49) < lift:(1.12)> lev:(0.01) [456] conv:(1.1)
+142. DEF_Trapper=1 17332 ==> ATK_Support_ATK=1 DEF_Anchor=1 4214    conf:(0.24) < lift:(1.12)> lev:(0.01) [456] conv:(1.03)
+143. ATK_Recon=1 19117 ==> ATK_Assault=2 Attacker_Won=1 4579    conf:(0.24) < lift:(1.12)> lev:(0.01) [495] conv:(1.03)
+144. ATK_Assault=2 Attacker_Won=1 8544 ==> ATK_Recon=1 4579    conf:(0.54) < lift:(1.12)> lev:(0.01) [495] conv:(1.12)
+145. DEF_Roamer=2 18447 ==> DEF_Trapper=1 DEF_Intel=1 4416    conf:(0.24) < lift:(1.12)> lev:(0.01) [467] conv:(1.03)
+146. DEF_Trapper=1 DEF_Intel=1 8562 ==> DEF_Roamer=2 4416    conf:(0.52) < lift:(1.12)> lev:(0.01) [467] conv:(1.11)
+147. DEF_Anchor=1 DEF_Intel=1 9175 ==> DEF_Trapper=1 4430    conf:(0.48) < lift:(1.11)> lev:(0.01) [454] conv:(1.1)
+148. DEF_Trapper=1 17332 ==> DEF_Anchor=1 DEF_Intel=1 4430    conf:(0.26) < lift:(1.11)> lev:(0.01) [454] conv:(1.04)
+149. ATK_Support_ATK=1 23418 ==> ATK_Shield=1 ATK_Assault=1 4012    conf:(0.17) < lift:(1.11)> lev:(0.01) [401] conv:(1.02)
+150. ATK_Shield=1 ATK_Assault=1 6166 ==> ATK_Support_ATK=1 4012    conf:(0.65) < lift:(1.11)> lev:(0.01) [401] conv:(1.19)
+151. ATK_Demolition=1 9653 ==> ATK_Recon=1 5102    conf:(0.53) < lift:(1.11)> lev:(0.01) [488] conv:(1.11)
+152. ATK_Recon=1 19117 ==> ATK_Demolition=1 5102    conf:(0.27) < lift:(1.11)> lev:(0.01) [488] conv:(1.03)
+

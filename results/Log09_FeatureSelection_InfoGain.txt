@@ -1,0 +1,108 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.InfoGainAttributeEval 
+Search:       weka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1
+Relation:     R6_General_Classification-weka.filters.unsupervised.attribute.NumericToNominal-R4-weka.filters.unsupervised.attribute.AddCluster-Wweka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 4 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10-I4-weka.filters.unsupervised.instance.Resample-S1-Z25.0
+Instances:    99890
+Attributes:   43
+              Map_Name
+              Skill_Rank
+              Role
+              Round_Result_Won
+              Operator_Name
+              Clearance_Level
+              Primary_Weapon
+              Secondary_Gadget
+              DK_Operator_Role
+              DK_Match_Phase
+              Prev_Round_Won
+              My_Team_Score
+              Win_Streak
+              DK_Prev_Round_Kills_Bucket
+              DK_Prev_Round_Deaths_Bucket
+              DK_Match_Kills_Bucket
+              DK_Match_Deaths_Bucket
+              DK_Team_Experience_Level
+              DK_Team_Lethal_Score
+              DK_Team_Tactical_Score
+              DK_Team_Experience_Gap
+              DK_Team_Diversity_Score
+              DK_Opp_Diversity_Score
+              DK_Match_Pressure_Score
+              DK_Opp_Count_Anchor
+              DK_Opp_Count_Assault
+              DK_Opp_Count_Roamer
+              DK_Opp_Count_Trapper
+              DK_Opp_Count_Intel
+              DK_Opp_Count_Support_ATK
+              DK_Opp_Count_Demolition
+              DK_Opp_Count_Recon
+              DK_Opp_Count_Shield
+              DK_Opp_Count_Sniper
+              Opponent_Score
+              DK_Floor_Level
+              DK_External_Soft_Walls
+              DK_Crucial_Hatches
+              DK_Team_Shotgun_Count
+              DK_Team_DMR_Count
+              DK_Team_Shield_Count
+              DK_Team_Auto_Count
+              cluster
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Attribute ranking.
+
+Attribute Evaluator (supervised, Class (nominal): 4 Round_Result_Won):
+	Information Gain Ranking Filter
+
+Ranked attributes:
+ 0.00573009   21 DK_Team_Experience_Gap
+ 0.00099558    2 Skill_Rank
+ 0.00098079    6 Clearance_Level
+ 0.00088745    7 Primary_Weapon
+ 0.00080154    5 Operator_Name
+ 0.00078446   18 DK_Team_Experience_Level
+ 0.00052047    8 Secondary_Gadget
+ 0.00039343   25 DK_Opp_Count_Anchor
+ 0.00038987   43 cluster
+ 0.00036314   27 DK_Opp_Count_Roamer
+ 0.00035369   19 DK_Team_Lethal_Score
+ 0.00033518    9 DK_Operator_Role
+ 0.00030676    3 Role
+ 0.00029225   33 DK_Opp_Count_Shield
+ 0.00023685   42 DK_Team_Auto_Count
+ 0.00022552   26 DK_Opp_Count_Assault
+ 0.00022032   20 DK_Team_Tactical_Score
+ 0.00019447   41 DK_Team_Shield_Count
+ 0.000176     32 DK_Opp_Count_Recon
+ 0.00013978   30 DK_Opp_Count_Support_ATK
+ 0.00012728    1 Map_Name
+ 0.00012339   22 DK_Team_Diversity_Score
+ 0.00011994   28 DK_Opp_Count_Trapper
+ 0.00011016   31 DK_Opp_Count_Demolition
+ 0.00010489   23 DK_Opp_Diversity_Score
+ 0.00009234   40 DK_Team_DMR_Count
+ 0.00009171   17 DK_Match_Deaths_Bucket
+ 0.00007961   16 DK_Match_Kills_Bucket
+ 0.00006017   39 DK_Team_Shotgun_Count
+ 0.00005045   15 DK_Prev_Round_Deaths_Bucket
+ 0.00004364   14 DK_Prev_Round_Kills_Bucket
+ 0.0000073    10 DK_Match_Phase
+ 0            38 DK_Crucial_Hatches
+ 0            36 DK_Floor_Level
+ 0            37 DK_External_Soft_Walls
+ 0            29 DK_Opp_Count_Intel
+ 0            35 Opponent_Score
+ 0            34 DK_Opp_Count_Sniper
+ 0            13 Win_Streak
+ 0            24 DK_Match_Pressure_Score
+ 0            11 Prev_Round_Won
+ 0            12 My_Team_Score
+
+Selected attributes: 21,2,6,7,5,18,8,25,43,27,19,9,3,33,42,26,20,41,32,30,1,22,28,31,23,40,17,16,39,15,14,10,38,36,37,29,35,34,13,24,11,12 : 42
+

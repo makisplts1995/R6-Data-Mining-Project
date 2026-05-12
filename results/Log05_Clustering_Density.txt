@@ -1,0 +1,478 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.MakeDensityBasedClusterer -M 1.0E-6 -W weka.clusterers.SimpleKMeans -- -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 4 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     R6_General_Classification-weka.filters.unsupervised.attribute.NumericToNominal-R4-weka.filters.unsupervised.attribute.NumericToNominal-R4-weka.filters.unsupervised.instance.Resample-S1-Z0.375
+Instances:    1498
+Attributes:   42
+              Map_Name
+              Skill_Rank
+              Role
+              Operator_Name
+              Clearance_Level
+              Primary_Weapon
+              Secondary_Gadget
+              DK_Operator_Role
+              DK_Match_Phase
+              Prev_Round_Won
+              My_Team_Score
+              Win_Streak
+              DK_Prev_Round_Kills_Bucket
+              DK_Prev_Round_Deaths_Bucket
+              DK_Match_Kills_Bucket
+              DK_Match_Deaths_Bucket
+              DK_Team_Experience_Level
+              DK_Team_Lethal_Score
+              DK_Team_Tactical_Score
+              DK_Team_Experience_Gap
+              DK_Team_Diversity_Score
+              DK_Opp_Diversity_Score
+              DK_Match_Pressure_Score
+              DK_Opp_Count_Anchor
+              DK_Opp_Count_Assault
+              DK_Opp_Count_Roamer
+              DK_Opp_Count_Trapper
+              DK_Opp_Count_Intel
+              DK_Opp_Count_Support_ATK
+              DK_Opp_Count_Demolition
+              DK_Opp_Count_Recon
+              DK_Opp_Count_Shield
+              DK_Opp_Count_Sniper
+              Opponent_Score
+              DK_Floor_Level
+              DK_External_Soft_Walls
+              DK_Crucial_Hatches
+              DK_Team_Shotgun_Count
+              DK_Team_DMR_Count
+              DK_Team_Shield_Count
+              DK_Team_Auto_Count
+Ignored:
+              Round_Result_Won
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+MakeDensityBasedClusterer: 
+
+Wrapped clusterer: 
+kMeans
+======
+
+Number of iterations: 8
+Within cluster sum of squared errors: 9601.944996663251
+
+Initial starting points (random):
+
+Cluster 0: PLANE,Copper,Defender,VALKYRIE,71,SPAS-12,NITRO_CELL,Intel,Early_Game,-1,0,0,None,'None (Flawless)',Early_Game/Low,Low_Deaths,'Novice (<100)',12,3,2.199997,3,4,0,0,2,0,0,0,1,0,0,1,1,0,-1,0,3,1,0,0,4
+Cluster 1: COASTLINE,Bronze,Attacker,TWITCH,49,F2,BREACH_CHARGE,Recon,Mid_Game,-1,0,0,None,'None (Flawless)',Early_Game/Low,Low_Deaths,'Novice (<100)',3,6,3.400002,3,3,0,2,0,2,1,0,0,0,0,0,0,0,1,3,0,0,0,0,5
+Cluster 2: KANAL,Diamond,Defender,BANDIT,253,MP7,BARBED_WIRE,Roamer,Late_Game,-1,0,0,None,'None (Flawless)',Early_Game/Low,Low_Deaths,'Elite (>150)',1,4,26.800003,3,4,0,0,1,0,0,0,0,0,2,1,1,0,2,3,0,0,0,0,5
+Cluster 3: OREGON,Copper,Attacker,BLACKBEARD,78,MK17_CQB,BREACH_CHARGE,Shield,Early_Game,-1,0,0,None,'None (Flawless)',Early_Game/Low,Low_Deaths,'Novice (<100)',3,4,17,5,4,0,1,0,2,1,1,0,0,0,0,0,0,-1,0,2,0,0,0,5
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                                         Cluster#
+Attribute                             Full Data                 0                 1                 2                 3
+                                       (1498.0)           (386.0)           (330.0)           (361.0)           (421.0)
+=======================================================================================================================
+Map_Name                                  PLANE             PLANE         COASTLINE         COASTLINE             PLANE
+Skill_Rank                                 Gold              Gold              Gold              Gold              Gold
+Role                                   Attacker          Defender          Attacker          Defender          Attacker
+Operator_Name                               ASH          VALKYRIE            TWITCH            BANDIT               ASH
+Clearance_Level                        107.5561           96.3756          117.6303          121.0083           98.3753
+Primary_Weapon                    416-C_CARBINE               MPX                F2               MP7              R4-C
+Secondary_Gadget                     NITRO_CELL        NITRO_CELL     BREACH_CHARGE       BARBED_WIRE     BREACH_CHARGE
+DK_Operator_Role                         Roamer            Anchor             Recon            Roamer           Assault
+DK_Match_Phase                       Early_Game        Early_Game          Mid_Game         Late_Game        Early_Game
+Prev_Round_Won                          -0.8738           -0.9119           -0.8576           -0.8587           -0.8646
+My_Team_Score                            0.0434            0.0233            0.0576            0.0499            0.0451
+Win_Streak                              -0.0027           -0.0285            0.0212                 0                 0
+DK_Prev_Round_Kills_Bucket                 None              None              None              None              None
+DK_Prev_Round_Deaths_Bucket     None (Flawless)   None (Flawless)   None (Flawless)   None (Flawless)   None (Flawless)
+DK_Match_Kills_Bucket            Early_Game/Low    Early_Game/Low    Early_Game/Low    Early_Game/Low    Early_Game/Low
+DK_Match_Deaths_Bucket               Low_Deaths        Low_Deaths        Low_Deaths        Low_Deaths        Low_Deaths
+DK_Team_Experience_Level          Novice (<100)     Novice (<100) Veteran (100-150) Veteran (100-150)     Novice (<100)
+DK_Team_Lethal_Score                     5.3738            6.3756            4.7727            5.9861            4.4014
+DK_Team_Tactical_Score                   4.4039            4.1995            4.6303            3.8033            4.9287
+DK_Team_Experience_Gap                  -0.5624           -2.9186            4.6208            0.8904           -3.7107
+DK_Team_Diversity_Score                  3.3545            3.0907            3.6212            3.0222            3.6722
+DK_Opp_Diversity_Score                   3.3338            3.6503            3.0424            3.5762            3.0641
+DK_Match_Pressure_Score                  -0.002           -0.0259            0.0242                 0           -0.0024
+DK_Opp_Count_Anchor                      0.8298            0.0415            1.5515            0.0554            1.6508
+DK_Opp_Count_Assault                     0.7924            1.5725                 0            1.6066                 0
+DK_Opp_Count_Roamer                      1.0047                 0            2.0909                 0            1.9359
+DK_Opp_Count_Trapper                     0.3832                 0            0.7364                 0            0.7862
+DK_Opp_Count_Intel                       0.3131                 0            0.6212                 0            0.6271
+DK_Opp_Count_Support_ATK                 0.4826            0.9145                 0            1.0249                 0
+DK_Opp_Count_Demolition                  0.1188            0.2202                 0            0.2576                 0
+DK_Opp_Count_Recon                       0.6676            1.2902                 0            1.3906                 0
+DK_Opp_Count_Shield                      0.2343            0.4896                 0            0.4488                 0
+DK_Opp_Count_Sniper                      0.1682            0.4585                 0            0.2078                 0
+Opponent_Score                           0.0454            0.0492            0.0333            0.0499            0.0475
+DK_Floor_Level                           0.1602            0.1736             0.403            0.1274           -0.0143
+DK_External_Soft_Walls                   1.4746            1.4352            1.7909            1.5097            1.2328
+DK_Crucial_Hatches                       0.9019            0.8523            0.7424            0.9114            1.0641
+DK_Team_Shotgun_Count                    0.3545            0.6632            0.0606            0.6205            0.0736
+DK_Team_DMR_Count                        0.2276                 0            0.4303                 0            0.4727
+DK_Team_Shield_Count                     0.1562                 0            0.3061                 0            0.3159
+DK_Team_Auto_Count                       4.2557            4.3212             4.197            4.3767            4.1378
+
+
+
+Fitted estimators (with ML estimates of variance):
+
+Cluster: 0 Prior probability: 0.2577
+
+Attribute: Map_Name
+Discrete Estimator. Counts =  23 30 30 27 21 13 23 30 26 26 17 19 17 42 28 30  (Total = 402)
+Attribute: Skill_Rank
+Discrete Estimator. Counts =  43 64 10 111 47 85 33  (Total = 393)
+Attribute: Role
+Discrete Estimator. Counts =  1 387  (Total = 388)
+Attribute: Operator_Name
+Discrete Estimator. Counts =  1 1 1 1 1 1 16 10 24 16 22 1 1 1 1 1 18 22 43 1 34 26 8 40 1 40 4 1 1 1 78  (Total = 417)
+Attribute: Clearance_Level
+Normal Distribution. Mean = 96.3756 StdDev = 47.3654
+Attribute: Primary_Weapon
+Discrete Estimator. Counts =  20 1 1 1 20 23 1 1 1 1 1 1 1 21 1 1 1 2 1 8 9 1 25 1 1 51 33 14 1 72 1 12 1 1 1 4 2 7 2 1 3 1 3 1 34 42  (Total = 432)
+Attribute: Secondary_Gadget
+Discrete Estimator. Counts =  44 1 1 90 1 76 180 1 1  (Total = 395)
+Attribute: DK_Operator_Role
+Discrete Estimator. Counts =  169 1 1 93 1 52 1 1 1 76  (Total = 396)
+Attribute: DK_Match_Phase
+Discrete Estimator. Counts =  184 74 131  (Total = 389)
+Attribute: Prev_Round_Won
+Normal Distribution. Mean = -0.9119 StdDev = 0.349
+Attribute: My_Team_Score
+Normal Distribution. Mean = 0.0233 StdDev = 0.1509
+Attribute: Win_Streak
+Normal Distribution. Mean = -0.0285 StdDev = 0.2726
+Attribute: DK_Prev_Round_Kills_Bucket
+Discrete Estimator. Counts =  9 10 9 362  (Total = 390)
+Attribute: DK_Prev_Round_Deaths_Bucket
+Discrete Estimator. Counts =  8 5 361 16  (Total = 390)
+Attribute: DK_Match_Kills_Bucket
+Discrete Estimator. Counts =  1 1 13 375  (Total = 390)
+Attribute: DK_Match_Deaths_Bucket
+Discrete Estimator. Counts =  3 1 21 365  (Total = 390)
+Attribute: DK_Team_Experience_Level
+Discrete Estimator. Counts =  42 262 85  (Total = 389)
+Attribute: DK_Team_Lethal_Score
+Normal Distribution. Mean = 6.3756 StdDev = 2.5124
+Attribute: DK_Team_Tactical_Score
+Normal Distribution. Mean = 4.1995 StdDev = 2.5058
+Attribute: DK_Team_Experience_Gap
+Normal Distribution. Mean = -2.9186 StdDev = 29.7023
+Attribute: DK_Team_Diversity_Score
+Normal Distribution. Mean = 3.0907 StdDev = 0.6188
+Attribute: DK_Opp_Diversity_Score
+Normal Distribution. Mean = 3.6503 StdDev = 0.7407
+Attribute: DK_Match_Pressure_Score
+Normal Distribution. Mean = -0.0259 StdDev = 0.2681
+Attribute: DK_Opp_Count_Anchor
+Normal Distribution. Mean = 0.0415 StdDev = 0.1993
+Attribute: DK_Opp_Count_Assault
+Normal Distribution. Mean = 1.5725 StdDev = 0.8524
+Attribute: DK_Opp_Count_Roamer
+Normal Distribution. Mean = 0 StdDev = 1.1745
+Attribute: DK_Opp_Count_Trapper
+Normal Distribution. Mean = 0 StdDev = 0.6384
+Attribute: DK_Opp_Count_Intel
+Normal Distribution. Mean = 0 StdDev = 0.517
+Attribute: DK_Opp_Count_Support_ATK
+Normal Distribution. Mean = 0.9145 StdDev = 0.6794
+Attribute: DK_Opp_Count_Demolition
+Normal Distribution. Mean = 0.2202 StdDev = 0.4144
+Attribute: DK_Opp_Count_Recon
+Normal Distribution. Mean = 1.2902 StdDev = 0.7402
+Attribute: DK_Opp_Count_Shield
+Normal Distribution. Mean = 0.4896 StdDev = 0.6032
+Attribute: DK_Opp_Count_Sniper
+Normal Distribution. Mean = 0.4585 StdDev = 0.4983
+Attribute: Opponent_Score
+Normal Distribution. Mean = 0.0492 StdDev = 0.228
+Attribute: DK_Floor_Level
+Normal Distribution. Mean = 0.1736 StdDev = 0.9039
+Attribute: DK_External_Soft_Walls
+Normal Distribution. Mean = 1.4352 StdDev = 1.1794
+Attribute: DK_Crucial_Hatches
+Normal Distribution. Mean = 0.8523 StdDev = 0.931
+Attribute: DK_Team_Shotgun_Count
+Normal Distribution. Mean = 0.6632 StdDev = 0.7689
+Attribute: DK_Team_DMR_Count
+Normal Distribution. Mean = 0 StdDev = 0.4719
+Attribute: DK_Team_Shield_Count
+Normal Distribution. Mean = 0 StdDev = 0.3932
+Attribute: DK_Team_Auto_Count
+Normal Distribution. Mean = 4.3212 StdDev = 0.7888
+
+Cluster: 1 Prior probability: 0.2204
+
+Attribute: Map_Name
+Discrete Estimator. Counts =  24 20 22 20 21 36 24 25 15 17 22 23 19 9 26 23  (Total = 346)
+Attribute: Skill_Rank
+Discrete Estimator. Counts =  23 18 10 144 79 50 13  (Total = 337)
+Attribute: Role
+Discrete Estimator. Counts =  331 1  (Total = 332)
+Attribute: Operator_Name
+Discrete Estimator. Counts =  5 1 21 6 24 7 1 1 1 1 1 12 15 31 15 31 1 1 1 20 1 1 4 1 11 1 1 31 29 84 1  (Total = 361)
+Attribute: Clearance_Level
+Normal Distribution. Mean = 117.6303 StdDev = 49.8574
+Attribute: Primary_Weapon
+Discrete Estimator. Counts =  1 8 27 3 1 1 10 9 7 20 17 8 78 1 5 2 7 1 36 3 1 1 1 1 19 1 1 1 1 1 15 1 7 12 1 1 1 1 1 3 1 25 1 31 1 1  (Total = 376)
+Attribute: Secondary_Gadget
+Discrete Estimator. Counts =  1 107 95 1 43 1 1 34 56  (Total = 339)
+Attribute: DK_Operator_Role
+Discrete Estimator. Counts =  4 32 24 1 158 1 45 15 59 1  (Total = 340)
+Attribute: DK_Match_Phase
+Discrete Estimator. Counts =  69 111 153  (Total = 333)
+Attribute: Prev_Round_Won
+Normal Distribution. Mean = -0.8576 StdDev = 0.4809
+Attribute: My_Team_Score
+Normal Distribution. Mean = 0.0576 StdDev = 0.2329
+Attribute: Win_Streak
+Normal Distribution. Mean = 0.0212 StdDev = 0.2957
+Attribute: DK_Prev_Round_Kills_Bucket
+Discrete Estimator. Counts =  17 4 8 305  (Total = 334)
+Attribute: DK_Prev_Round_Deaths_Bucket
+Discrete Estimator. Counts =  14 7 302 11  (Total = 334)
+Attribute: DK_Match_Kills_Bucket
+Discrete Estimator. Counts =  1 1 21 311  (Total = 334)
+Attribute: DK_Match_Deaths_Bucket
+Discrete Estimator. Counts =  2 1 14 317  (Total = 334)
+Attribute: DK_Team_Experience_Level
+Discrete Estimator. Counts =  50 81 202  (Total = 333)
+Attribute: DK_Team_Lethal_Score
+Normal Distribution. Mean = 4.7727 StdDev = 2.4233
+Attribute: DK_Team_Tactical_Score
+Normal Distribution. Mean = 4.6303 StdDev = 2.0173
+Attribute: DK_Team_Experience_Gap
+Normal Distribution. Mean = 4.6208 StdDev = 32.5056
+Attribute: DK_Team_Diversity_Score
+Normal Distribution. Mean = 3.6212 StdDev = 0.6868
+Attribute: DK_Opp_Diversity_Score
+Normal Distribution. Mean = 3.0424 StdDev = 0.6165
+Attribute: DK_Match_Pressure_Score
+Normal Distribution. Mean = 0.0242 StdDev = 0.2903
+Attribute: DK_Opp_Count_Anchor
+Normal Distribution. Mean = 1.5515 StdDev = 0.8414
+Attribute: DK_Opp_Count_Assault
+Normal Distribution. Mean = 0 StdDev = 0.9775
+Attribute: DK_Opp_Count_Roamer
+Normal Distribution. Mean = 2.0909 StdDev = 0.8795
+Attribute: DK_Opp_Count_Trapper
+Normal Distribution. Mean = 0.7364 StdDev = 0.7094
+Attribute: DK_Opp_Count_Intel
+Normal Distribution. Mean = 0.6212 StdDev = 0.5712
+Attribute: DK_Opp_Count_Support_ATK
+Normal Distribution. Mean = 0 StdDev = 0.673
+Attribute: DK_Opp_Count_Demolition
+Normal Distribution. Mean = 0 StdDev = 0.3237
+Attribute: DK_Opp_Count_Recon
+Normal Distribution. Mean = 0 StdDev = 0.8409
+Attribute: DK_Opp_Count_Shield
+Normal Distribution. Mean = 0 StdDev = 0.4841
+Attribute: DK_Opp_Count_Sniper
+Normal Distribution. Mean = 0 StdDev = 0.3742
+Attribute: Opponent_Score
+Normal Distribution. Mean = 0.0333 StdDev = 0.1795
+Attribute: DK_Floor_Level
+Normal Distribution. Mean = 0.403 StdDev = 0.9365
+Attribute: DK_External_Soft_Walls
+Normal Distribution. Mean = 1.7909 StdDev = 1.11
+Attribute: DK_Crucial_Hatches
+Normal Distribution. Mean = 0.7424 StdDev = 0.7884
+Attribute: DK_Team_Shotgun_Count
+Normal Distribution. Mean = 0.0606 StdDev = 0.2386
+Attribute: DK_Team_DMR_Count
+Normal Distribution. Mean = 0.4303 StdDev = 0.6002
+Attribute: DK_Team_Shield_Count
+Normal Distribution. Mean = 0.3061 StdDev = 0.5283
+Attribute: DK_Team_Auto_Count
+Normal Distribution. Mean = 4.197 StdDev = 0.846
+
+Cluster: 2 Prior probability: 0.241
+
+Attribute: Map_Name
+Discrete Estimator. Counts =  18 23 17 24 25 34 26 24 30 31 20 24 22 17 22 20  (Total = 377)
+Attribute: Skill_Rank
+Discrete Estimator. Counts =  22 16 11 158 79 68 14  (Total = 368)
+Attribute: Role
+Discrete Estimator. Counts =  1 362  (Total = 363)
+Attribute: Operator_Name
+Discrete Estimator. Counts =  1 90 1 1 1 1 9 39 9 12 21 1 1 1 1 1 89 14 6 1 19 23 1 15 1 26 1 1 1 1 3  (Total = 392)
+Attribute: Clearance_Level
+Normal Distribution. Mean = 121.0083 StdDev = 50.3809
+Attribute: Primary_Weapon
+Discrete Estimator. Counts =  88 1 1 1 18 12 1 1 1 1 1 1 1 10 1 1 1 2 1 6 28 1 18 3 1 21 18 9 89 2 1 3 1 1 1 3 1 2 12 1 4 1 4 1 26 5  (Total = 407)
+Attribute: Secondary_Gadget
+Discrete Estimator. Counts =  162 1 1 52 1 68 83 1 1  (Total = 370)
+Attribute: DK_Operator_Role
+Discrete Estimator. Counts =  64 1 1 11 1 238 1 1 1 52  (Total = 371)
+Attribute: DK_Match_Phase
+Discrete Estimator. Counts =  92 148 124  (Total = 364)
+Attribute: Prev_Round_Won
+Normal Distribution. Mean = -0.8587 StdDev = 0.4642
+Attribute: My_Team_Score
+Normal Distribution. Mean = 0.0499 StdDev = 0.2177
+Attribute: Win_Streak
+Normal Distribution. Mean = 0 StdDev = 0.3069
+Attribute: DK_Prev_Round_Kills_Bucket
+Discrete Estimator. Counts =  15 10 12 328  (Total = 365)
+Attribute: DK_Prev_Round_Deaths_Bucket
+Discrete Estimator. Counts =  9 13 328 15  (Total = 365)
+Attribute: DK_Match_Kills_Bucket
+Discrete Estimator. Counts =  2 1 22 340  (Total = 365)
+Attribute: DK_Match_Deaths_Bucket
+Discrete Estimator. Counts =  1 1 20 343  (Total = 365)
+Attribute: DK_Team_Experience_Level
+Discrete Estimator. Counts =  55 91 218  (Total = 364)
+Attribute: DK_Team_Lethal_Score
+Normal Distribution. Mean = 5.9861 StdDev = 2.6373
+Attribute: DK_Team_Tactical_Score
+Normal Distribution. Mean = 3.8033 StdDev = 2.1151
+Attribute: DK_Team_Experience_Gap
+Normal Distribution. Mean = 0.8904 StdDev = 32.7148
+Attribute: DK_Team_Diversity_Score
+Normal Distribution. Mean = 3.0222 StdDev = 0.6777
+Attribute: DK_Opp_Diversity_Score
+Normal Distribution. Mean = 3.5762 StdDev = 0.6661
+Attribute: DK_Match_Pressure_Score
+Normal Distribution. Mean = 0 StdDev = 0.2977
+Attribute: DK_Opp_Count_Anchor
+Normal Distribution. Mean = 0.0554 StdDev = 0.2288
+Attribute: DK_Opp_Count_Assault
+Normal Distribution. Mean = 1.6066 StdDev = 0.752
+Attribute: DK_Opp_Count_Roamer
+Normal Distribution. Mean = 0 StdDev = 1.1745
+Attribute: DK_Opp_Count_Trapper
+Normal Distribution. Mean = 0 StdDev = 0.6384
+Attribute: DK_Opp_Count_Intel
+Normal Distribution. Mean = 0 StdDev = 0.517
+Attribute: DK_Opp_Count_Support_ATK
+Normal Distribution. Mean = 1.0249 StdDev = 0.6376
+Attribute: DK_Opp_Count_Demolition
+Normal Distribution. Mean = 0.2576 StdDev = 0.4373
+Attribute: DK_Opp_Count_Recon
+Normal Distribution. Mean = 1.3906 StdDev = 0.6941
+Attribute: DK_Opp_Count_Shield
+Normal Distribution. Mean = 0.4488 StdDev = 0.5938
+Attribute: DK_Opp_Count_Sniper
+Normal Distribution. Mean = 0.2078 StdDev = 0.4057
+Attribute: Opponent_Score
+Normal Distribution. Mean = 0.0499 StdDev = 0.2177
+Attribute: DK_Floor_Level
+Normal Distribution. Mean = 0.1274 StdDev = 0.9209
+Attribute: DK_External_Soft_Walls
+Normal Distribution. Mean = 1.5097 StdDev = 1.1485
+Attribute: DK_Crucial_Hatches
+Normal Distribution. Mean = 0.9114 StdDev = 0.8857
+Attribute: DK_Team_Shotgun_Count
+Normal Distribution. Mean = 0.6205 StdDev = 0.6678
+Attribute: DK_Team_DMR_Count
+Normal Distribution. Mean = 0 StdDev = 0.4719
+Attribute: DK_Team_Shield_Count
+Normal Distribution. Mean = 0 StdDev = 0.3932
+Attribute: DK_Team_Auto_Count
+Normal Distribution. Mean = 4.3767 StdDev = 0.6756
+
+Cluster: 3 Prior probability: 0.281
+
+Attribute: Map_Name
+Discrete Estimator. Counts =  33 19 20 35 26 15 30 31 27 28 23 19 33 46 25 27  (Total = 437)
+Attribute: Skill_Rank
+Discrete Estimator. Counts =  50 46 6 145 74 80 27  (Total = 428)
+Attribute: Role
+Discrete Estimator. Counts =  422 1  (Total = 423)
+Attribute: Operator_Name
+Discrete Estimator. Counts =  116 1 17 7 23 12 1 1 1 1 1 42 23 48 6 16 1 1 1 17 1 1 5 1 53 1 1 13 38 1 1  (Total = 452)
+Attribute: Clearance_Level
+Normal Distribution. Mean = 98.3753 StdDev = 53.027
+Attribute: Primary_Weapon
+Discrete Estimator. Counts =  1 5 37 9 1 1 29 5 2 8 15 9 1 1 23 1 1 2 64 2 1 3 2 1 14 1 1 1 1 1 23 1 10 8 94 1 1 1 1 4 1 28 1 48 1 1  (Total = 467)
+Attribute: Secondary_Gadget
+Discrete Estimator. Counts =  1 130 65 1 72 1 1 95 64  (Total = 430)
+Attribute: DK_Operator_Role
+Discrete Estimator. Counts =  5 220 23 1 33 1 39 23 85 1  (Total = 431)
+Attribute: DK_Match_Phase
+Discrete Estimator. Counts =  221 122 81  (Total = 424)
+Attribute: Prev_Round_Won
+Normal Distribution. Mean = -0.8646 StdDev = 0.4553
+Attribute: My_Team_Score
+Normal Distribution. Mean = 0.0451 StdDev = 0.2076
+Attribute: Win_Streak
+Normal Distribution. Mean = 0 StdDev = 0.3004
+Attribute: DK_Prev_Round_Kills_Bucket
+Discrete Estimator. Counts =  18 10 13 384  (Total = 425)
+Attribute: DK_Prev_Round_Deaths_Bucket
+Discrete Estimator. Counts =  12 12 385 16  (Total = 425)
+Attribute: DK_Match_Kills_Bucket
+Discrete Estimator. Counts =  1 1 23 400  (Total = 425)
+Attribute: DK_Match_Deaths_Bucket
+Discrete Estimator. Counts =  1 1 22 401  (Total = 425)
+Attribute: DK_Team_Experience_Level
+Discrete Estimator. Counts =  56 263 105  (Total = 424)
+Attribute: DK_Team_Lethal_Score
+Normal Distribution. Mean = 4.4014 StdDev = 2.4568
+Attribute: DK_Team_Tactical_Score
+Normal Distribution. Mean = 4.9287 StdDev = 2.1344
+Attribute: DK_Team_Experience_Gap
+Normal Distribution. Mean = -3.7107 StdDev = 30.595
+Attribute: DK_Team_Diversity_Score
+Normal Distribution. Mean = 3.6722 StdDev = 0.6906
+Attribute: DK_Opp_Diversity_Score
+Normal Distribution. Mean = 3.0641 StdDev = 0.6303
+Attribute: DK_Match_Pressure_Score
+Normal Distribution. Mean = -0.0024 StdDev = 0.2964
+Attribute: DK_Opp_Count_Anchor
+Normal Distribution. Mean = 1.6508 StdDev = 0.8632
+Attribute: DK_Opp_Count_Assault
+Normal Distribution. Mean = 0 StdDev = 0.9775
+Attribute: DK_Opp_Count_Roamer
+Normal Distribution. Mean = 1.9359 StdDev = 0.8459
+Attribute: DK_Opp_Count_Trapper
+Normal Distribution. Mean = 0.7862 StdDev = 0.7307
+Attribute: DK_Opp_Count_Intel
+Normal Distribution. Mean = 0.6271 StdDev = 0.5898
+Attribute: DK_Opp_Count_Support_ATK
+Normal Distribution. Mean = 0 StdDev = 0.673
+Attribute: DK_Opp_Count_Demolition
+Normal Distribution. Mean = 0 StdDev = 0.3237
+Attribute: DK_Opp_Count_Recon
+Normal Distribution. Mean = 0 StdDev = 0.8409
+Attribute: DK_Opp_Count_Shield
+Normal Distribution. Mean = 0 StdDev = 0.4841
+Attribute: DK_Opp_Count_Sniper
+Normal Distribution. Mean = 0 StdDev = 0.3742
+Attribute: Opponent_Score
+Normal Distribution. Mean = 0.0475 StdDev = 0.2127
+Attribute: DK_Floor_Level
+Normal Distribution. Mean = -0.0143 StdDev = 0.8933
+Attribute: DK_External_Soft_Walls
+Normal Distribution. Mean = 1.2328 StdDev = 1.1607
+Attribute: DK_Crucial_Hatches
+Normal Distribution. Mean = 1.0641 StdDev = 0.986
+Attribute: DK_Team_Shotgun_Count
+Normal Distribution. Mean = 0.0736 StdDev = 0.2788
+Attribute: DK_Team_DMR_Count
+Normal Distribution. Mean = 0.4727 StdDev = 0.5703
+Attribute: DK_Team_Shield_Count
+Normal Distribution. Mean = 0.3159 StdDev = 0.4946
+Attribute: DK_Team_Auto_Count
+Normal Distribution. Mean = 4.1378 StdDev = 0.7675
+
+
+Time taken to build model (full training data) : 0.04 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       433 ( 29%)
+1       319 ( 21%)
+2       314 ( 21%)
+3       432 ( 29%)
+
+
+Log likelihood: -47.18017
+
